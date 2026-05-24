@@ -1,0 +1,195 @@
+:root {
+    --bg: #f8fbff;
+    --surface: #ffffff;
+    --surface-2: #f2f8ff;
+    --text: #111827;
+    --muted: #6b7280;
+    --blue: #5d8cff;
+    --blue-soft: #d5e3ff;
+    --black: #111827;
+    --danger: #ef4444;
+    --success: #10b981;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(180deg, #eef6ff 0%, #f8fbff 50%, #ffffff 100%);
+    color: var(--text);
+}
+
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    flex-shrink: 0;
+}
+
+.navbar-brand {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #fff !important;
+}
+
+.navbar-nav {
+    font-size: 0.95rem;
+}
+
+.navbar-nav .nav-link {
+    color: #cbd5e1 !important;
+    transition: all 0.25s ease;
+    border-radius: 8px;
+    padding: 0.6rem 1rem !important;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    background: rgba(96, 165, 250, 0.2);
+    color: #fff !important;
+}
+
+.navbar-nav .dropdown-menu {
+    background: #1e293b;
+    border: 1px solid rgba(148,163,184,0.2);
+    border-radius: 12px;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+    color: #cbd5e1;
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    background: rgba(96, 165, 250, 0.15);
+    color: #fff;
+}
+
+.main-content {
+    flex: 1;
+    padding: 24px;
+}
+
+.card-glass,
+.panel-glass {
+    background: rgba(255,255,255,0.85);
+    border: 1px solid rgba(148,163,184,0.2);
+    border-radius: 24px;
+    box-shadow: 0 20px 50px rgba(15,23,42,0.08);
+}
+
+.card-glass {
+    padding: 22px;
+}
+
+.card-glass h2,
+.panel-glass h2 {
+    margin-top: 0;
+}
+
+.btn-soft {
+    background: rgba(59, 130, 246, 0.12);
+    color: #2563eb;
+}
+
+.table thead th {
+    border-bottom: 2px solid rgba(148,163,184,0.35);
+}
+
+.shadow-soft {
+    box-shadow: 0 20px 40px rgba(15,23,42,0.08);
+}
+
+.product-card {
+    border: none;
+    border-radius: 24px;
+    overflow: hidden;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 24px 50px rgba(15,23,42,0.15);
+}
+
+.product-card .card-img-top {
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.badge-soft {
+    background: rgba(59,130,246,0.12);
+    color: #2563eb;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: rgba(59,130,246,0.4);
+    box-shadow: 0 0 0 0.15rem rgba(59,130,246,0.15);
+}
+
+.text-muted {
+    color: var(--muted) !important;
+}
+
+.toast-container {
+    position: fixed;
+    right: 20px;
+    bottom: 24px;
+    z-index: 1080;
+}
+
+@media (max-width: 991px) {
+    .navbar-nav {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 767px) {
+    .main-content {
+        padding: 16px;
+    }
+    
+    .topbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+}
+
+.table-responsive {
+    overflow-x: auto;
+}
+
+.progress-bar-soft {
+    background: linear-gradient(90deg, #60a5fa, #2563eb);
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.input-group-sm .btn-outline-secondary {
+    font-size: 0.875rem;
+    padding: 0.35rem 0.5rem;
+    font-weight: bold;
+}
+
+.input-group-sm .form-control-sm {
+    font-size: 0.875rem;
+    padding: 0.35rem 0.25rem;
+}
+
+.btn-group-sm .btn {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.4rem;
+}
+
